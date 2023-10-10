@@ -1,0 +1,8 @@
+class Inventory{
+    protected: 
+
+
+    public:
+
+
+};

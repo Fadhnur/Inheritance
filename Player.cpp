@@ -1,8 +1,6 @@
 #include <iostream>
-#include "gameManager.hpp"
+#include "Player.hpp"
 
 using namespace std;
 
-int main(){
-
-}
+    
