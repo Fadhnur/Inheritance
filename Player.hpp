@@ -1,17 +1,19 @@
-class Player
-{
+#ifndef PLAYER_H
+#define PLAYER_H
+
+#include "Object.hpp"
+#include "Senjata.hpp"
+
+class Player : public Object {
 private:
-    /* data */
+    Senjata senjata;
+
 public:
-    Player(/* args */);
-    ~Player();
+    // Konstruktor untuk inisialisasi health player dan senjata
+    Player(int initialHealth, const Senjata& weapon);
+
+    // Fungsi untuk menyerang musuh
+    void serangMusuh(Object& target);
 };
 
-Player::Player(/* args */)
-{
-}
-
-Player::~Player()
-{
-}
-    
+#endif

@@ -1,18 +1,26 @@
-#include <iostream>
+#ifndef SENJATA_H
+#define SENJATA_H
 
-using namespace std;
+#include <string>
 
 class Senjata {
 private:
+    std::string namaSenjata;
     int damage;
 
-
-protected :
-    string name;
-
 public:
-    Senjata(/* args */);
-    ~Senjata();
+    // Konstruktor untuk inisialisasi atribut
+    Senjata(const std::string& nama, int dmg);
 
-    
+    // Getter untuk nama senjata
+    std::string getNamaSenjata() const;
+
+    // Getter untuk damage senjata
+    int getDamage() const;
+
+    // Fungsi untuk menampilkan informasi senjata
+    void tampilkanInfoSenjata() const;
 };
+
+#endif
+

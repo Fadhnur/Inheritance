@@ -1,11 +1,14 @@
-#include <iostream>
 #include "Object.hpp"
 
-using namespace std;
+// Implementasi konstruktor
+Object::Object(int initialHealth) : health(initialHealth) {}
 
-class Enemy : public Object {
-    protected :
+// Implementasi getter untuk health
+int Object::getHealth() const {
+    return health;
+}
 
-    public :
-
-};
+// Implementasi fungsi untuk mengurangi health objek
+void Object::kurangiHealth(int damage) {
+    health -= damage;
+}
