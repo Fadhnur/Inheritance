@@ -3,9 +3,8 @@
 
 using namespace std;
 
-class Enemy : public Object {
-    protected :
-
-    public :
-
-};
+Object::Object(int currentHealth, int maxHealth, int damage){
+    currentHealth = currentHealth;
+    maxHealth = maxHealth;
+    damage = damage;
+}

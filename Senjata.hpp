@@ -1,18 +1,10 @@
-#include <iostream>
-
-using namespace std;
-
-class Senjata {
-private:
+class Senjata : public inventory {
+protected:
     int damage;
-
-
-protected :
-    string name;
-
+    string nama;
+    
 public:
-    Senjata(/* args */);
-    ~Senjata();
+    Senjata();
 
     
 };

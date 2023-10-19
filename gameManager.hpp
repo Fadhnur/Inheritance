@@ -1,10 +1,16 @@
 class gameManager
 {
-private:
-    /* data */
 public:
-    gameManager(/* args */);
-    ~gameManager();
+    Player p;
+    Enemy e;
+
+
+
+public:
+    gameManager();
+    void play();
+    void PlayerStatus(int HP);
+    void EnemyStatus(int HP);
 };
 
 

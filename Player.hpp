@@ -1,17 +1,16 @@
-class Player
+class Player : public Object
 {
-private:
-    /* data */
+protected :
+    Object obj;
+    inventory inv;
+    
 public:
-    Player(/* args */);
-    ~Player();
+    Player(int currentHealth, int maxHealth, int damage);
+    void Darah(int HP);
+    void takeDamage(int damage);
+    void hitEnemy(int damage);
+
 };
 
-Player::Player(/* args */)
-{
-}
 
-Player::~Player()
-{
-}
     

@@ -1,9 +1,9 @@
 class Object {
     protected :
-    int HP;
-    int Damage;
-    
+    int damage;
+    int currentHealth;
+    int maxHealth;
 
     public :
-    Object();
+    Object(int currentHealth, int maxHealth, int damage);
 };

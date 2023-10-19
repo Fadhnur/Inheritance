@@ -7,10 +7,15 @@
 
 using namespace std;
 
-gameManager::gameManager(/* args */)
+gameManager::gameManager()
 {
 }
 
-gameManager::~gameManager()
-{
+void gameManager::PlayerStatus(int HP){
+    cout << "Player" << endl;
+    p.Darah(HP);
+    cout << "HP : " << p.Darah(HP) << endl;
+}
+
+void gameManager::play(){
 }
