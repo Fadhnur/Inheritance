@@ -1,15 +1,13 @@
-class Player : public Object
-{
-protected :
-    Object obj;
-    Inventory tas;
+#ifndef PLAYER_HPP
+#define PLAYER_HPP
+
+#include "Object.hpp"
+
+class Player : public Object{
     
 public:
-    Player(int currentHealth, int damage);
-    void darahPlayer(int HP);
-    void takeDamage(int damage);
-    void attackEnemy();
-};
+    Player(int h, int d);
+    void darahPlayer(int Health);
+};  
 
-
-    
+#endif

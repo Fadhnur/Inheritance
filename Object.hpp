@@ -1,10 +1,13 @@
-class Object {
-    protected :
-    int damage;
-    int currentHealth;
-    //int maxHealth;
+#ifndef OBJECT_HPP
+#define OBJECT_HPP
 
-    public :
-    Object(int currentHealth, int damage);
-    void attack();
+class Object {
+public :
+    int damage;
+    int health;
+
+    Object(int h, int d);
+    void attack(Object& target);
 };
+
+#endif

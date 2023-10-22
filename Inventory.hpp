@@ -1,13 +1,15 @@
-class Inventory {
-    protected: 
-    string tas[2];
-    Senjata meleeWeapon;
-    Senjata rangedWeapon;
+#ifndef INVENTORY_HPP
+#define INVENTORY_HPP
+#include "Senjata.hpp"
 
+class Inventory {
     public:
-    Inventory();
-    void printInventory();
-    
-    void switchWeapon();
-    void useWeapon();
+        Senjata tas[2];
+
+        Inventory();
+        void printInventory(); 
+        void switchWeapon();
+        void useWeapon();
 };
+
+#endif

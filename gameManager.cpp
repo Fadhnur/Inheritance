@@ -1,32 +1,21 @@
 #include <iostream>
 #include "gameManager.hpp"
-#include "Player.hpp"
-#include "Object.hpp"
+//#include "Player.hpp"
+//#include "Object.hpp"
 #include "Inventory.hpp"
-#include "Enemy.hpp"
-#include "Senjata.hpp"
+//#include "Enemy.hpp"
+//#include "Senjata.hpp"
 
 using namespace std;
 
-gameManager::gameManager()
-{
-}
-
-void gameManager::EnemyStatus(){
-    e.DarahEnemy(100);
-    cout << e.darahEnemy << endl;
-}
-
-void gameManager::PlayerStatus(){
-    p.darahPlayer(100);
-    cout << p.darahPlayer << endl;
-}
+gameManager::gameManager(){}
 
 void gameManager::play(){
-    Senjata senjata;
-    Player plyr;
-    Enemy enemy;
-    gameManager game;
+    //Senjata senjata;
+    //Player plyr;
+    //Enemy enemy;
+    //gameManager game;
+    Inventory tas;
 
     char input;
     cout << "Selamat datang di permainan!" << endl;
@@ -37,10 +26,13 @@ void gameManager::play(){
     if(input == 'm'||'M'){
         system("cls");
 
+        //Memilih Senjata
+        tas.printInventory();
+
         //menampilkan player status
-        game.PlayerStatus();
+        //game.PlayerStatus();
         //menampilkan enemy status
-        game.EnemyStatus();
+        //game.EnemyStatus();
         //menampilkan opsi untuk menyerang
         
         //menyerang

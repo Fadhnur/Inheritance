@@ -1,11 +1,12 @@
-class Enemy : public Object
-{
-    protected:
-    Object obj;
+#ifndef ENEMY_HPP
+#define ENEMY_HPP
 
-    public:
-    Enemy();
+#include "Object.hpp"
+
+class Enemy : public Object{
+public:
+    Enemy(int h, int d);
     void darahEnemy(int HP);
-    void takeDamage(int damage);
-    void attackPlayer();
 };
+
+#endif

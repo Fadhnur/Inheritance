@@ -2,17 +2,19 @@
 #include "Inventory.hpp"
 #include "Senjata.hpp"
 
+
 using namespace std;
 
-Inventory::Inventory(){}
+Inventory::Inventory(){
+    tas[0] = Senjata("Shotgun", "Jarak dekat", 40);
+    tas[1] = Senjata("M4", "Jarak jauh", 35);
+}
 
 void Inventory::printInventory(){
     for(int i = 0; i<2; i++){
-        cout << tas[i] << endl;
+        cout << "Senjata " << i + 1 << ": " <<tas[i].getWeaponInfo() << endl;
     }
 }
-
-void Inventory::attack(){}
 
 void Inventory::switchWeapon(){
     char jawaban;
@@ -33,8 +35,12 @@ void Inventory::useWeapon(){
     cout << "Ketik 1 untuk Senjata jarak dekat" << endl;
     cout << "Ketik 2 untuk Senjata jarak jauh" << endl;
     
-    if(jawaban == 1){}
-    else if(jawaban == 2){}
+    if(jawaban == 1){
+        cout << "Menggunakan senjata jarak dekat" << endl;
+    }
+    else if(jawaban == 2){
+        cout << "Menggunakan senjata jarak jauh" << endl;
+    }
     else{
         cout << "Senjata tidak ditemukan" << endl;
     }

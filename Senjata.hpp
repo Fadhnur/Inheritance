@@ -1,12 +1,16 @@
-class Senjata : public Inventory {
+#ifndef SENJATA_HPP
+#define SENJATA_HPP
+
+class Senjata {
 protected:
     int damage;
-    string nama;
-    Inventory tas;
+    std::string nama;
+    std::string tipe;
 
 public:
-    Senjata(string nama);
-    //void jarakJauh(string name, int damage);
-    //void jarakDekat(string name, int damage);
+    Senjata(std::string nama, std::string tipe, int damage);
+    std::string getWeaponInfo();
     
 };
+
+#endif

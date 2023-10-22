@@ -1,14 +1,21 @@
+#ifndef gameManager_HPP
+#define gameManager_HPP
+
+#include "Player.hpp"
+#include "Enemy.hpp"
+#include "Inventory.hpp"
+
 class gameManager
 {
-    private:
+public:
         Player p;
         Enemy e;
+        Inventory inventory;
 
-    public:
         gameManager();
         void play();
-        void PlayerStatus(int HP);
-        void EnemyStatus(int HP);
+        void PlayerStatus();
+        void EnemyStatus();
 };
 
-
+#endif

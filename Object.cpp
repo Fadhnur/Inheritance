@@ -3,11 +3,16 @@
 
 using namespace std;
 
-Object::Object(int currentHealth, int damage){
-    currentHealth = 100;
-    damage = damage;
+Object::Object(int h, int d){
+    health = h;
+    damage = d;
 }
 
-void Object::attack(){
-    
+void Object::attack(Object& target){
+    if(target.health > 0){
+        target.health -= this->damage;
+    }
+    if(target.health <= 0){
+        cout << "Subjek telah mati" << endl;
+    }
 }
