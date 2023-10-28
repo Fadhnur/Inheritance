@@ -13,9 +13,7 @@ void Object::attack(Object& target){
     if(target.health > 0 && health > 0){
         target.health -= damage;
     }
-    /*if (target.health <= 0 && health <= 0) {
-        cout << "Subjek telah mati" << endl;
-    }*/
+    
 }
 
 int Object::getHealth() {

@@ -18,7 +18,7 @@ public:
         void displayStatus();
         void playerAttack();
         bool isWin();
-        bool isLife();
+        bool isLose();
 };
 
 #endif
