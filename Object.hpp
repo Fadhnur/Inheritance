@@ -2,12 +2,15 @@
 #define OBJECT_HPP
 
 class Object {
-public :
+protected :
     int damage;
     int health;
 
+public:
     Object(int h, int d);
     void attack(Object& target);
+    int getHealth();
+    int getDamage();
 };
 
 #endif

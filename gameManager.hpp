@@ -7,15 +7,18 @@
 
 class gameManager
 {
-public:
-        Player p;
-        Enemy e;
+private:
+        Player player;
+        Enemy enemy;
         Inventory inventory;
 
+public:
         gameManager();
         void play();
-        void PlayerStatus();
-        void EnemyStatus();
+        void displayStatus();
+        void playerAttack();
+        bool isWin();
+        bool isLife();
 };
 
 #endif
