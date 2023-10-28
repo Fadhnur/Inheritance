@@ -2,17 +2,22 @@
 #define ENEMY_HPP
 
 #include "Object.hpp"
+#include "Senjata.hpp"
 
 class Enemy : public Object{
 private:
     static const int Jumlah_Jenis = 2;
-    //Enemy jenis[Jumlah_Jenis];
+    int jenis[Jumlah_Jenis];
+    Senjata weapon;
 
 public:
     Enemy();
     Enemy(int h, int d);
     void darahEnemy(int HP);
-    
+    void randomType();
+    Senjata getWeapon();
+    void setEnemyDamage(Senjata& weapon);
+    void setDamage(int newDamage);
 };
 
 #endif

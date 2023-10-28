@@ -34,28 +34,32 @@ void gameManager::play(){
         player.darahPlayer(100);
         //menampilkan enemy status
         enemy.darahEnemy(150);
+        enemy.randomType();
+
+
         cout << endl;
 
+        //menampilkan status player dan enemy
         displayStatus();
-        //menampilkan opsi untuk menyerang
-        //playerAttack();
 
+        //menampilkan opsi untuk menyerang
         while (enemy.getHealth() > 0) {
             playerAttack();
             displayStatus();
         }
-        //cout << "Musuh telah dikalahkan" << endl;
-
-
+        //mengecek kondisi musuh jika darah 0
         isWin();
-        
-        //menyerang
-        //enemy auto serang player
 
-        //menampilkan player status
-        //menampilkan enemy status
-        //menampilkan opsi untuk menyerang
+        //mengecek kondisi pemain
+        isLose();
 
+        enemy.randomType();
+    }
+
+    else {
+        cout << "Masukkan huruf dengan benar!" << endl;
+        cout << endl;
+        play();
     }
 
 
@@ -69,6 +73,8 @@ void gameManager::displayStatus() {
 
     cout << "Status Musuh " << endl;
     cout << "HP : " << enemy.getHealth() << endl;
+    cout << "Damage : " << enemy.getDamage() << endl;
+    cout << endl;
 }
 
 void gameManager::playerAttack() {
@@ -80,7 +86,7 @@ void gameManager::playerAttack() {
 
     if (jawab == 'a' || jawab == 'A') {
         player.attack(enemy);
-        //enemy.attack(player);
+        enemy.attack(player);
 
     }
     else {
@@ -91,6 +97,16 @@ void gameManager::playerAttack() {
 bool gameManager::isWin() {
     if (enemy.getHealth() <= 0) {
         cout << "Musuh telah dikalahkan!" << endl;
+        
+        return true;
+    }
+    return false;
+}
+
+bool gameManager::isLose() {
+    if (player.getHealth() <= 0) {
+        cout << "Pemain telah mati" << endl;
+        cout << "Kalah" << endl;
         return true;
     }
     return false;
